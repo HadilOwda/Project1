@@ -1,0 +1,258 @@
+/*remove all the basic styling*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    120deg,
+    #add8e6,
+    #b389ee
+  ); /*for the back ground color from the right to the left*/
+  color: black;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  color: white;
+  font-size: 4m !important;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+header h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+/* form */
+
+.add-form {
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #b389ee;
+  width: fit-content;
+  padding: 15px;
+  margin: auto;
+  margin-bottom: 70px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.task-input {
+  width: 600px;
+  border: none;
+  padding: 10px;
+  background-color: #e8dff3;
+  border-radius: 12px 0px 0px 12px;
+  height: 50px;
+  font-size: 20px;
+  color: #86749c;
+}
+
+.task-input:focus {
+  outline-width: 0;
+}
+
+.task-input::placeholder {
+  color: #564c6178;
+}
+
+.task-button {
+  background-color: #cdb4f0;
+  color: #8763bb;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  width: 110px;
+  height: 50px;
+  border-radius: 0px 12px 12px 0px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+.task-button:hover {
+  background-color: #d1b9f5;
+}
+
+.task-button:focus {
+  outline: 0;
+}
+
+/*center our to do contianer*/
+.ToDoListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ToDoList {
+  width: 60%;
+  list-style: none;
+  padding: 0;
+}
+
+.todo {
+  margin: 0.5rem;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  font-size: 8mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.todo li {
+  font-size: 8mm;
+  height: 10mm;
+  width: 200%;
+  padding: 0rem 1rem;
+  box-sizing: border-box;
+  flex: 1;
+}
+.checkbutton,
+.deletebutton,
+.editbutton {
+  color: white;
+  border: none;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+.checkbutton {
+  background: greenyellow;
+}
+.deletebutton {
+  background: rgb(230, 17, 17);
+}
+.editbutton {
+  background: #add8e6;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.checkbutton:focus,
+.deletebutton:focus,
+.editbutton:focus {
+  outline: none;
+}
+
+/*style the todo item*/
+.todo-item {
+  padding: 0rem 0rem;
+}
+/*to set up the delete function*/
+.fa-trash-alt,
+.fa-check-square,
+.fa-edit,
+.fa-check-circle {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.editing {
+  font-size: 8mm;
+  width: 100%;
+  /* padding: 0rem 1rem; */
+  margin: 0rem 1rem;
+  box-sizing: border-box;
+  font-size: 8mm;
+  font-family: Roboto;
+  border: none;
+  background-color: #e8e4f0;
+  border-radius: 2px;
+  outline: 1px solid #8763bb;
+}
+
+.removing-trans {
+  transform: translateY(8rem) rotateY(20deg);
+  opacity: 0;
+}
+span {
+  font-size: 8mm;
+  width: 200%;
+  padding: 0rem 1rem;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 1em !important;
+  color: #743dc2 !important;
+  font-weight: 800 !important;
+  padding: 0rem 0.5rem !important;
+}
+::placeholder {
+  color: #7f7f80;
+}
+.filter-todo {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #e8dff3;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #8763bb;
+  width: 195px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.select {
+  position: relative;
+  overflow: hidden;
+  padding: 0 1rem;
+  border-radius: 12px;
+  width: 195px;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #cdb4f0;
+  color: #8763bb;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  background-color: #d1b9f5;
+  color: #8763bb;
+}
+
+.signout-btn {
+  background-color: #cdb4f0;
+  color: #8763bb;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  width: 140px;
+  height: 30px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.signout-btn:hover {
+  background-color: #d1b9f5;
+}
+
+.signout-btn:focus {
+  outline: 0;
+}
