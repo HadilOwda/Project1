@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../style/sign.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+  crossorigin="anonymous"
+/>
+  </head>
+  <body>
+
+    <header>
+      <h1><span class="title">To-Do</span> List</h1>
+    </header>
+
+    <form id="form" class="signup-form">
+      <h2>Sign In</h2>
+      <label for="user">User id:</label></br>
+      <input type="text" id="user" name="user" placeholder="User id" /></br>
+
+      <label for="password">Password:</label></br>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+      /></br>
+
+      <button id="btn">Sign In</button>
+      <p>You don't have account? <a href="pages/signup.html">Sign up</a></p>
+    </form>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyCq_wLoY8oAdxUwXjXKNfz5vz6WaaoPXeI",
+        authDomain: "to-do--list.firebaseapp.com",
+        databaseURL: "https://to-do--list-default-rtdb.firebaseio.com",
+        projectId: "to-do--list",
+        storageBucket: "to-do--list.appspot.com",
+        messagingSenderId: "530539448503",
+        appId: "1:530539448503:web:ce7c866ccc9ec421b42532",
+        measurementId: "G-C9KS0EGK67",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="./js/signin.js"></script>
+  </body>
+</html>
